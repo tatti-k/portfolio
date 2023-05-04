@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <!-- HTML/CSS学習用に作成 2020年9月5日 -->
+<!-- 就活用に突貫工事 2023年5月4日 -->
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Kaito - ABOUT</title>
     <meta name="discription" content="快斗のポートフォリオサイト">
     <link rel="icon" type="image/png" href="images/baseline_account_circle_black_18dp.png">
@@ -11,6 +13,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/aboutJavascript.js"></script>
   </head>
   <body>
 
@@ -21,7 +24,7 @@
           <ul class ="main-nav">
             <li><a href="index.html">home</a></li>
             <li><a href="about.html">about</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <!-- <li><a href="contact.html">contact</a></li> -->
           </ul>
         </nav>
       </header>
@@ -35,55 +38,24 @@
           <h1>高橋　快斗</h1>
         </div>
         <div class="explanation">
-          <img src="images/full-screen.jpg" alt="portrait">
-          <p>2000年生まれ、豊橋技術科学大学二年生。大学では、情報・知能工学を専攻。ロボコン同好会に所属し、制御および渉外を担当。C++、Python、HTML/CSS/JSを学習中。</p>
-        </div>
-      </div>
-
-      <div class="robocon">
-        <h1>ロボコン同好会</h1>
-        <div class="explanation">
-          <a href="https://www.tutrobo.rm.me.tut.ac.jp/" target="_blank"><img src="images/full-screen.jpg" alt="robot"></a>
-          <p><a href="http://www.official-robocon.com/gakusei/">NHK学生ロボコン</a>で優勝し、その世界大会である<a href="http://www.official-robocon.com/abu/">ABUロボコン</a>で世界一を勝ち取る為に活動。<br>
-            写真は、NHK学生ロボコン2020へ向けて作成したトライロボット。
+          <div class="thumbnail">
+            <div class="selfie"></div>
+          </div>
+          <p id="my-explanation">2000年生まれ、豊橋技術科学大学に入学。
+            大学では、情報・知能工学を専攻。学部１、２年次にロボコン同好会に所属し、制御および渉外を担当。
+            学部3、４年時に学生エンジニアAI Tech Labに所属。
+            大学では、機械学習について研究。
           </p>
+        </div>
+        <div class="blog">
+          <h1>技術ブログ</h1>
+            <button type="button" onclick="window.open('https://maru.nagoya/index.php/2022/05/18/what-is-vision-transformer/', '_blank')">【ViT】画像認識の大革命！Vision Transformerとは？</button>
+            <button type="button" onclick="window.open('https://techblog.morphoinc.com/entry/2023/04/24/110007', '_blank')">実務訓練 2022：ネイル画像生成アプリケーションの作成</button>
         </div>
       </div>
     </div>
-
-    <section id="location">
-      <div class="wrapper">
-        <div class="location-info">
-          <h3 class="sub-title">豊橋技術科学大学</h3>
-          <p>
-            住所：愛知県豊橋市天伯町雲雀ヶ丘1-1
-          </p>
-        </div>
-        <div class="location-map">
-          GoogleMap
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.1320419341864!2d137.40646661445118!3d34.701849380434126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004d486441646c7%3A0xb819d28be7a7df7f!2z6LGK5qmL5oqA6KGT56eR5a2m5aSn5a2m!5e0!3m2!1sja!2sjp!4v1599286567550!5m2!1sja!2sjp" width="800" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <section id ="sns">
-      <div class="wrapper">
-        <div class="sns-box">
-          <h3 class="sub-title">Facebook</h3>
-          Facebook
-        </div>
-        <div class="sns-box">
-          <h3 class="sub-title">Twitter</h3>
-          Twitter
-          <a class="twitter-timeline" href="https://twitter.com/home?ref_src=twsrc%5Etfw">Tweets by home</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <div class="sns-box">
-          <h3 class="sub-title">YouTube</h3>
-          YouTube
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/2zQ7OpZAArA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
   </body>
+  <footer>
+    <p>Copyright © 2023 Takahashi Kaito</p>
+  </footer>  
 </html>

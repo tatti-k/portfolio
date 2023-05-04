@@ -6,7 +6,7 @@ html{
 
 body{
   line-height: 1.7;
-  color: #0bd;
+  /* color: #0bd; */
 }
 
 a{
@@ -32,6 +32,11 @@ iframe{
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 4%;
+}
+
+.big-bg{
+  background-color: #000;
+  padding-bottom: 10px;
 }
 
 /* .logo{
@@ -102,7 +107,7 @@ iframe{
 }
 
 #home{
-  background-image: url(../images/full-screen2.jpg);
+  background-image: url(../images/full_screen.jpg);
   min-height: 100vh;
   background-position: bottom center;
   /* background-size: contain; */
@@ -110,6 +115,10 @@ iframe{
 
 #home .page-title{
   text-transform: none;
+}
+
+#home .page-title{
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;  
 }
 
 
@@ -158,12 +167,24 @@ input[type="submit"]{
 }
 
 /* about */
+
 .name{
   font-size: 1.5rem;
 }
 
-.robocon {
-  margin-top: 10px;
+#about body{
+  background-color: #F0F5F5;
+}
+
+.wrapper .page-title{
+  text-shadow: -1px -1px 0 #1E90FF, 1px -1px 0 #1E90FF, -1px 1px 0 #1E90FF, 1px 1px 0 #1E90FF;  
+}
+
+.introduction h1{
+  /* background-color: #2FBED6; */
+  color: #2FBED6;
+  /* padding: 20px;
+  border-radius: 10px; */
 }
 
 .explanation{
@@ -172,7 +193,13 @@ input[type="submit"]{
   border-bottom: 2px solid rgb(199, 222, 231);
 }
 
-.explanation img{
+.thumbnail{
+  flex-shrink: 0; /* 画像が縮小されないように */
+}
+.selfie{
+  background-image: url("../images/selfie.jpg");
+  background-position: center center;
+  background-size: cover;
   width: 200px;
   height: 200px;
 }
@@ -208,6 +235,36 @@ input[type="submit"]{
   width: 74%;
 }
 
+.blog button {
+  background-color: #1E90FF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 3px 0px #00BFFF;
+  transition: background-color 0.3s;
+  margin-top: 10px; /* 上部に10pxの余白を追加 */
+  margin-bottom: 10px; /* 下部に10pxの余白を追加 */
+}
+
+.blog button:hover {
+  background-color: #00BFFF;
+}
+
+footer {
+  background-color: #333; /* フッターの背景色 */
+  color: #fff; /* フッターのテキストカラー */
+  padding: 20px; /* フッターの余白 */
+  text-align: center; /* フッターのテキストを中央揃え */
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
 #sns{
   background: #FAF7F0;
   padding: 4% 0;
@@ -226,6 +283,22 @@ input[type="submit"]{
 .sns-box{
   width: 30%;
 }
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    margin: 0 0 20px 0;
+  }
+
+  .text-container {
+    margin: 0;
+  }
+}
+
 
 /* モバイル */
 @media (max-width: 600px){
